@@ -1,11 +1,11 @@
 
 
 let hoursBegin = 12;
-let hoursBeginMin = 34;
+let hoursBeginMin = 28;
 let hoursBeginStr = hoursBegin + ":" + hoursBeginMin;
 
-let hoursEnd = 15;
-let hoursEndMin = 55;
+let hoursEnd = 14;
+let hoursEndMin = 52;
 let hoursEndStr = hoursEnd + ":" + hoursEndMin;
 
 
@@ -30,3 +30,5 @@ let timeWorked = timeEnd - timeBegin;
 
 
 console.log("Beginn: " + hoursBeginStr + ", Ende: "+ hoursEndStr + ", Anw: " + timeWorked);
+
+process.exit();
