@@ -3,13 +3,9 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+const mw = require('./my-middleware.js');
 
-const myLogger = function (req, res, next) {
-    console.log(`Date: ${new Date().toISOString()} and URL: ${req.url}`);
-    next();
-}
-
-app.use(myLogger);
+app.use(mw());
 
 app.get('/', (req, res) => {
     res.send(`The path is: ${req.path}`);
