@@ -4,6 +4,10 @@ const express = require('express');
 const app = express();
 const port = 5000;
 
+app.get('/', (req, res) => {
+    res.send(`The path is: ${req.path}`);
+})
+
 app.get('/api/:version', (req, res) => {
     if ( req.params.version == "v1" ) {
         res.send(`The api version is: ${req.params.version}`);
