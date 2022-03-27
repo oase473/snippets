@@ -1,11 +1,16 @@
 
 
-let hoursBegin = 12;
-let hoursBeginMin = 28;
+let hoursSection = ["1130", "1137"]
+
+let hoursBeginComplete = hoursSection[0];
+let hoursEndComplete = hoursSection[1];
+
+let hoursBegin = Number(hoursBeginComplete.slice(0,2));
+let hoursBeginMin = Number(hoursBeginComplete.slice(2,4));
 let hoursBeginStr = hoursBegin + ":" + hoursBeginMin;
 
-let hoursEnd = 14;
-let hoursEndMin = 52;
+let hoursEnd = Number(hoursEndComplete.slice(0,2));
+let hoursEndMin = Number(hoursEndComplete.slice(2,4));
 let hoursEndStr = hoursEnd + ":" + hoursEndMin;
 
 

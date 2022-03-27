@@ -4,8 +4,12 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const mw = require('./my-middleware.js');
+const vempro = require('./my-vempro.js');
 
 app.use(mw());
+
+console.log(vempro.v1.information.name);
+
 
 app.get('/', (req, res) => {
     res.send(`The path is: ${req.path}`);
