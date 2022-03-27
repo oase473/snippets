@@ -7,6 +7,9 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+const values = require('src/values.js');
+
+console.log(values);
 
 app.get('/api/:version/:collection/:endpoint', (req, res) => {
     console.log(req.url);
