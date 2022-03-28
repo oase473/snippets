@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+<<<<<<< HEAD
 const mw = require('./my-middleware.js');
 const vempro = require('./my-vempro.js');
 
@@ -38,6 +39,11 @@ app.get('/api/:version/:collection', (req, res) => {
         res.send(`Invalid collection: ${req.params.collection}`);
     }
 })
+=======
+const values = require('src/values.js');
+
+console.log(values);
+>>>>>>> 6d253dab63d98f778a7fe12f4e20c491e088d9aa
 
 app.get('/api/:version/:collection/:endpoint', (req, res) => {
     if ( req.params.collection == "information" && req.params.endpoint == "name" ) {
